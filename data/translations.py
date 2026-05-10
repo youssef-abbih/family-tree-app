@@ -27,8 +27,42 @@ TRANSLATIONS = {
         # Header
         'toggle_theme': 'تبديل الوضع الليلي',
         'change_language': 'English',
+
+        # Tree view - navigation
+        'tree_title': 'شجرة الأنساب',
+        'back_to_landing': 'الرئيسية',
+        'load_next_generation': 'تحميل الجيل التالي',
+        'no_more_generations': 'وصلت إلى آخر جيل',
+        'generation_label': 'الجيل',
+
+        # Tree view - sidebar
+        'sidebar_title': 'الفلاتر والبحث',
+        'search_placeholder': 'ابحث باسم الشخص...',
+        'filter_all': 'الكل',
+        'statistics': 'الإحصائيات',
+        'favorites': 'المفضلة',
+        'no_results': 'لا توجد نتائج',
+        'no_favorites': 'لا توجد مفضلة',
+
+        # Tree view - legend / types
+        'legend': 'دليل الألوان',
+        'type_prophet': 'نبي',
+        'type_companion': 'صحابي',
+        'type_poet': 'شاعر',
+        'type_leader': 'قائد',
+        'type_scholar': 'عالم',
+
+        # Person modal
+        'close': 'إغلاق',
+        'biography': 'السيرة',
+        'birth_year': 'سنة الميلاد',
+        'death_year': 'سنة الوفاة',
+        'children': 'الأبناء',
+        'add_favorite': 'إضافة للمفضلة',
+        'remove_favorite': 'إزالة من المفضلة',
+        'unknown': 'غير معروف',
     },
-    
+
     'en': {
         'app_title': 'Arab Genealogy Tree',
         'hero_title': 'A Journey Through History',
@@ -53,6 +87,40 @@ TRANSLATIONS = {
         # Header
         'toggle_theme': 'Toggle Dark Mode',
         'change_language': 'عربي',
+
+        # Tree view - navigation
+        'tree_title': 'Genealogy Tree',
+        'back_to_landing': 'Home',
+        'load_next_generation': 'Load Next Generation',
+        'no_more_generations': 'You have reached the last generation',
+        'generation_label': 'Generation',
+
+        # Tree view - sidebar
+        'sidebar_title': 'Filters & Search',
+        'search_placeholder': 'Search by name...',
+        'filter_all': 'All',
+        'statistics': 'Statistics',
+        'favorites': 'Favorites',
+        'no_results': 'No results found',
+        'no_favorites': 'No favorites yet',
+
+        # Tree view - legend / types
+        'legend': 'Legend',
+        'type_prophet': 'Prophet',
+        'type_companion': 'Companion',
+        'type_poet': 'Poet',
+        'type_leader': 'Leader',
+        'type_scholar': 'Scholar',
+
+        # Person modal
+        'close': 'Close',
+        'biography': 'Biography',
+        'birth_year': 'Birth Year',
+        'death_year': 'Death Year',
+        'children': 'Children',
+        'add_favorite': 'Add to Favorites',
+        'remove_favorite': 'Remove from Favorites',
+        'unknown': 'Unknown',
     }
 }
 

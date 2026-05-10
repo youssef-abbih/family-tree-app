@@ -14,10 +14,10 @@ COLORS = {
 
 # الإحصائيات (ستستبدلها لاحقاً ببيانات حقيقية)
 STATS = {
-    'generations': 50,
-    'personalities': 100,
-    'companions': 30,
-    'poets': 40,
+    'generations': 25,
+    'personalities': 59,
+    'companions': 17,
+    'poets': 0,
 }
 
 # اللغات المتاحة
