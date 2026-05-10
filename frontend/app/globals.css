@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Tree connector layout ─────────────────────────────────────────────────
+ * Each .tree-node draws its own half of the horizontal sibling-connector bar
+ * via a ::before pseudo-element. Adjacent halves merge into one line.
+ * RTL overrides swap first/last child because flex row-reverse flips visual
+ * order without changing DOM order.
+ * ─────────────────────────────────────────────────────────────────────── */
+
+.tree-children-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.tree-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.75rem;
+  position: relative;
+}
+
+/* Horizontal sibling connector bar */
+.tree-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #d6b87a;
+}
+.tree-node:first-child::before { left: 50%; }
+.tree-node:last-child::before  { right: 50%; }
+.tree-node:only-child::before  { display: none; }
+
+/* RTL: flip first/last so bars connect correctly */
+[dir="rtl"] .tree-node:first-child::before { left: 0;   right: 50%; }
+[dir="rtl"] .tree-node:last-child::before  { left: 50%; right: 0; }
+[dir="rtl"] .tree-node:only-child::before  { display: none; }
+
+/* Vertical connectors */
+.tree-drop-to-card {
+  width: 2px;
+  height: 1rem;
+  background: #d6b87a;
+  flex-shrink: 0;
+}
+
+.tree-drop-from-card {
+  width: 2px;
+  height: 1.5rem;
+  background: #d6b87a;
+  flex-shrink: 0;
+}
+
+/* Highlighted ancestor path — purple */
+.tree-node-hl::before {
+  background: #a855f7 !important;
+  height: 3px;
+}
+
+.tree-drop-hl {
+  background: #a855f7 !important;
+  width: 3px;
+}
+
+/* Dark mode connector colors */
+@media (prefers-color-scheme: dark) {
+  .tree-node::before,
+  .tree-drop-to-card,
+  .tree-drop-from-card {
+    background: #78553a;
+  }
+  .tree-node-hl::before,
+  .tree-drop-hl {
+    background: #c084fc !important;
+  }
+}
+
+/* Arabic font stack */
+body {
+  font-family: 'Segoe UI', 'Noto Sans Arabic', Arial, sans-serif;
+}
+
+/* Smooth scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d6b87a transparent;
+}
