@@ -1,42 +1,38 @@
-# Python
+# ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
 .Python
+.venv/
 venv/
 env/
-ENV/
-build/
 dist/
+build/
 *.egg-info/
 
-# IDE
+# ── Node / Next.js ────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/tsconfig.tsbuildinfo
+
+# ── Environment ───────────────────────────────────────────────────────────────
+.env
+.env.local
+frontend/.env.local
+frontend/.env*.local
+
+# ── IDE & OS ──────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
 *.swp
 *.swo
 *~
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Environment
-.env
-.env.local
-
-# Logs
+# ── Logs & test ───────────────────────────────────────────────────────────────
 *.log
-
-# NiceGUI
-.nicegui/
-
-# Data (if you want to keep it private during development)
-# data/family_tree.json
-# data/*.json
-
-# Testing
 .pytest_cache/
 htmlcov/
 .coverage
